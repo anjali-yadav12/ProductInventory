@@ -1,26 +1,47 @@
-# 📦 Product Inventory API
+# Product Inventory API
 
-A simple **ASP.NET Core Web API** project to manage products in an inventory system.  
-It supports **CRUD operations**, **low-stock alerts**, and is built with **Entity Framework Core** + **SQLite**.
-
----
-
-## ✨ Features
-- Add new products
-- View all products
-- Update product details (price, stock, etc.)
-- Delete products 
-- Low stock alert (products with stock < 5)
+A simple ASP.NET Core Web API for managing products in an inventory system.  
+It supports product creation, retrieval, update, deletion, and low-stock alerts.
 
 ---
 
-## 🛠 Tech Stack
-- **.NET 6 / .NET 7**
-- **ASP.NET Core Web API**
-- **Entity Framework Core**
-- **SQLite Database**
-- **Swagger / OpenAPI** for testing endpoints
+## Features
+- Add new products  
+- View all products  
+- Get product by ID  
+- Update product details (price, stock, etc.)  
+- Delete a product  
+- Low-stock alert (e.g., stock < 5)
 
 ---
 
+## Project Structure
+- **Controllers/** → Contains API controllers  
+- **DTOs/** → Data Transfer Objects  
+- **Data/** → EF Core DbContext  
+- **Models/** → Entity models  
 
+---
+
+## Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/anjali-yadav12/ProductInventory.git
+   cd ProductInventory
+
+2. Restore dependencies:
+   dotnet restore
+
+3.Run the application:
+  dotnet run
+
+API Endpoints
+
+1. Get all products- GET /api/products
+2. Get product by ID - GET /api/products/{id}
+3. Create a product- POST /api/products
+4. Update a product - PUT /api/products/{id}
+5. Delete a product - DELETE /api/products/{id}
+6. Get low-stock products - GET /api/products/lowstock
+
+   
